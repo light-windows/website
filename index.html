@@ -159,18 +159,6 @@ section{padding:96px 0}
 .founder b{font-family:var(--f-display);font-size:19px;color:var(--cedar)}
 .founder span{font-size:14px;color:var(--muted);line-height:1.5}
 
-/* Membership */
-.member-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;margin-top:40px;align-items:start}
-.steps{list-style:none;padding:0;margin:0;counter-reset:s;display:flex;flex-direction:column;gap:14px}
-.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start;background:var(--white);border-radius:14px;padding:18px 20px;box-shadow:0 0 0 1px var(--line)}
-.steps li::before{content:counter(s);flex:none;width:36px;height:36px;border-radius:18px;background:var(--green);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:600}
-.fees{background:var(--green);color:var(--white);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:20px}
-.fees h3{color:var(--gold-light);font-size:24px}
-.fee-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.18)}
-.fee-row b{font-family:var(--f-display);font-size:30px;color:var(--white)}
-.fees p{font-size:15px;color:#CFE0D4}
-.fees .btn{align-self:flex-start}
-
 /* Contact / footer */
 .contact{background:var(--dew)}
 .contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px}
@@ -179,7 +167,9 @@ section{padding:96px 0}
 .contact-card span{color:var(--muted)}
 .contact-card a{font-weight:500;text-decoration:none;word-break:break-all}
 .contact-card a:hover{text-decoration:underline}
-.phones{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px}
+.phones{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.phones li{display:flex;flex-direction:column}
+.phones span{font-size:14px}
 .site-footer{background:var(--cedar);color:#CFE0D4;padding:48px 0;font-size:15px}
 .site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
 .site-footer .brand span{color:var(--paper)}
@@ -195,7 +185,7 @@ section{padding:96px 0}
   .nav{display:none;position:absolute;top:72px;inset-inline:0;flex-direction:column;align-items:stretch;background:var(--paper);border-bottom:1px solid var(--line);padding:12px 24px 20px}
   .nav.open{display:flex}
   .nav .btn{margin:8px 0 0}
-  .hero .wrap,.about-grid,.vm-grid,.structure-grid,.member-grid{grid-template-columns:1fr}
+  .hero .wrap,.about-grid,.vm-grid,.structure-grid{grid-template-columns:1fr}
   .hero-logo{width:min(300px,80%);order:-1}
   .goals-list,.contact-grid{grid-template-columns:1fr}
 }
@@ -231,7 +221,6 @@ section{padding:96px 0}
       <a href="#axes">محاورنا</a>
       <a href="#initiatives">مبادرات مقترحة</a>
       <a href="#structure">الهيكل</a>
-      <a href="#membership">العضوية</a>
       <a class="btn btn-green" href="#contact">تواصل معنا</a>
     </nav>
   </div>
@@ -250,7 +239,7 @@ section{padding:96px 0}
         <p class="motto">الثقافة نور… والإبداع مسؤولية… والتراث ذاكرة المستقبل.</p>
         <p class="intro">منصة ثقافية سورية مستقلة من حمص، تفتح نوافذها على الإبداع والتراث والحوار، وتبني جسوراً بين السوريين في الداخل والمهجر.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#membership">انضم إلى الرابطة</a>
+          <a class="btn btn-primary" href="#axes">اكتشف محاورنا</a>
           <a class="btn btn-ghost" href="#vision">تعرّف على رؤيتنا</a>
         </div>
         <div class="hero-meta">
@@ -276,8 +265,7 @@ section{padding:96px 0}
         <div class="note">الرابطة مستقلة ومحايدة؛ لا تتدخل في العقائد الدينية ولا في الأمور السياسية، وتقدّم خدماتها لجميع المواطنين دون تمييز.</div>
       </div>
       <div class="facts">
-        <div class="fact"><b>2026</b><span>عام التأسيس</span></div>
-        <div class="fact"><b>7</b><span>أعضاء مؤسسون</span></div>
+        <div class="fact" style="grid-column:span 2"><b>2026</b><span>عام التأسيس</span></div>
         <div class="fact"><b>8</b><span>قيم تحكم عملنا</span></div>
         <div class="fact"><b>5</b><span>محاور تنفيذية</span></div>
       </div>
@@ -459,43 +447,25 @@ section{padding:96px 0}
   <!-- Founders -->
   <section id="founders" class="founders">
     <div class="wrap">
-      <div class="eyebrow">الأعضاء المؤسسون</div>
+      <div class="eyebrow">فريق الرابطة</div>
       <h2 class="section-title">من أطلقوا النافذة الأولى</h2>
       <div class="founders-grid">
-        <div class="founder"><div class="avatar" aria-hidden="true">م</div><b>محمد جاسم قانصو</b><span>محامٍ</span></div>
-        <div class="founder"><div class="avatar" aria-hidden="true">ع</div><b>د. عبد المسيح دعيج</b><span>دكتوراه في الهندسة الزراعية</span></div>
-        <div class="founder"><div class="avatar" aria-hidden="true">ف</div><b>فادي عليوي</b><span>مهندس زراعي</span></div>
-        <div class="founder"><div class="avatar" aria-hidden="true">ع</div><b>عبد اللطيف حداد</b><span>إجازة في الاقتصاد</span></div>
-        <div class="founder"><div class="avatar" aria-hidden="true">ف</div><b>فاديا العبود</b><span>إجازة في التربية</span></div>
-        <div class="founder"><div class="avatar" aria-hidden="true">د</div><b>داليا عبد الصمد</b><span>مهندسة معمارية</span></div>
-        <div class="founder"><div class="avatar" aria-hidden="true">ح</div><b>حازم اسماعيل</b><span>محامٍ</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">ع</div><b>الفنان عمار فرحان بلبل</b><span>المدير التنفيذي للرابطة</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">ن</div><b>الفنان نوار فرحان بلبل</b><span>داعم</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">م</div><b>المحامي محمد قانصو</b><span>رئيس مجلس الإدارة</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">ع</div><b>الدكتور عبد المسيح دعيج</b><span>نائب رئيس مجلس الإدارة</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">ح</div><b>المحامي حازم اسماعيل</b><span>عضو مجلس إدارة</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">د</div><b>المهندسة داليا عبد الصمد</b><span>عضو مجلس إدارة</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">ل</div><b>الأستاذة لمى طباع</b><span>داعم</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">ف</div><b>الشاعرة فاطمه الحسن</b><span>داعم</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">ف</div><b>المهندس فادي العليوي</b><span>أمين السر</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">ع</div><b>الأستاذ عبد اللطيف حداد</b><span>المدير المالي</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">ش</div><b>الأستاذ شريح نوايا</b><span>داعم</span></div>
+        <div class="founder"><div class="avatar" aria-hidden="true">ع</div><b>الأستاذ عبد المعين النجيب</b><span>عضو مجلس إدارة</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Membership -->
-  <section id="membership">
-    <div class="wrap">
-      <div class="eyebrow">العضوية</div>
-      <h2 class="section-title">كن نافذة من نوافذ النور</h2>
-      <p class="lead">يحق لكل مواطن أو مواطنة أتم الثامنة عشرة الانتساب إلى الرابطة، متمتعاً بحقوقه المدنية كاملة وبحسن السيرة والسلوك، وغير منتسب لجهة تتعارض أهدافها مع أهداف الرابطة.</p>
-      <div class="member-grid">
-        <ol class="steps">
-          <li><span>اطّلع على النظام الداخلي للرابطة ووافق عليه.</span></li>
-          <li><span>قدّم طلباً خطياً إلى مجلس الإدارة يتضمن اسمك الثلاثي وتاريخ ميلادك وعنوانك المفصل.</span></li>
-          <li><span>يبت مجلس الإدارة في الطلب بأغلبية الأصوات خلال مدة لا تتجاوز شهرين.</span></li>
-          <li><span>يبلغك أمين السر بالنتيجة خلال أسبوع من تاريخ البت بالطلب.</span></li>
-        </ol>
-        <div class="fees">
-          <h3>رسوم العضوية</h3>
-          <div class="fee-row"><span>رسم الانتساب (مرة واحدة)</span><b>250 ل.س</b></div>
-          <div class="fee-row"><span>الاشتراك الشهري</span><b>100 ل.س</b></div>
-          <p>يُؤدى الاشتراك سنوياً أو على أقساط شهرية أو موسمية بحسب رغبة العضو. السنة المالية من كانون الثاني حتى كانون الأول.</p>
-          <a class="btn btn-primary" href="#contact">اطلب استمارة الانتساب</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Contact -->
   <section id="contact" class="contact">
@@ -503,13 +473,13 @@ section{padding:96px 0}
       <div class="eyebrow">تواصل معنا</div>
       <h2 class="section-title">أبوابنا ونوافذنا مفتوحة</h2>
       <div class="contact-grid">
-        <div class="contact-card"><b>المقر</b><span>حمص، الجمهورية العربية السورية<br>[العنوان التفصيلي]</span></div>
+        <div class="contact-card"><b>المقر</b><span>حمص، الجمهورية العربية السورية</span></div>
         <div class="contact-card"><b>البريد الإلكتروني</b><a href="mailto:d.abdalmaseeh.74@gmail.com" dir="ltr">d.abdalmaseeh.74@gmail.com</a></div>
         <div class="contact-card"><b>الهاتف</b>
           <ul class="phones">
-            <li><a href="tel:+963932357407" dir="ltr">+963 932 357 407</a></li>
-            <li><a href="tel:+963945556188" dir="ltr">+963 945 556 188</a></li>
-            <li><a href="tel:+963955742534" dir="ltr">+963 955 742 534</a></li>
+            <li><span>الفنان عمار فرحان بلبل</span><a href="tel:+963932357407" dir="ltr">+963 932 357 407</a></li>
+            <li><span>الفنان عمار فرحان بلبل</span><a href="tel:+963945556188" dir="ltr">+963 945 556 188</a></li>
+            <li><span>الدكتور عبد المسيح دعيج</span><a href="tel:+963955742534" dir="ltr">+963 955 742 534</a></li>
           </ul>
         </div>
       </div>
