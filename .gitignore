@@ -1,2 +1,2 @@
-# Source documents (internal)
-*.pdf
+# Source documents (internal) — only PDFs in the project root
+/*.pdf

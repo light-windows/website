@@ -1,11 +1,61 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Visual Identity</title>
-<style>body{margin:0;background:#E9E5DA;font-family:system-ui,sans-serif;color:#063D1F}h1{font-size:22px;margin:32px 40px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:40px;padding:32px 40px}
-a{display:block;text-decoration:none;color:#063D1F;font-weight:600}a span{display:block;margin-bottom:8px}
-iframe{width:1440px;height:900px;border:0;transform:scale(.333);transform-origin:0 0;pointer-events:none;background:#fff}
-a div,a{overflow:hidden}a{height:330px}</style></head>
-<body><h1>Light Windows — Visual Identity</h1><div class="grid"><a href="preview/Main.html"><span>01 · Brand overview</span><iframe src="preview/Main.html" tabindex="-1" aria-hidden="true"></iframe></a>
-<a href="preview/Colors.html"><span>02 · Color</span><iframe src="preview/Colors.html" tabindex="-1" aria-hidden="true"></iframe></a>
-<a href="preview/Type.html"><span>03 · Typography</span><iframe src="preview/Type.html" tabindex="-1" aria-hidden="true"></iframe></a>
-<a href="preview/Elements.html"><span>04 · Motifs & applications</span><iframe src="preview/Elements.html" tabindex="-1" aria-hidden="true"></iframe></a></div></body></html>
+<style>
+body{margin:0;background:#E9E5DA;font-family:system-ui,sans-serif;color:#063D1F}
+header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:32px 40px 0}
+h1{font-size:22px;margin:0}
+.all{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:#0B5A2E;color:#fff;text-decoration:none;font-weight:600;font-size:15px}
+.btn:hover{background:#063D1F}
+.btn.alt{background:#C9A04A;color:#063D1F}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:40px;padding:32px 40px;align-items:start}
+figure{margin:0}
+.thumb{display:block;width:480px;max-width:100%;overflow:hidden;border-radius:8px}
+iframe{border:0;transform-origin:0 0;pointer-events:none;background:#fff}
+figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px;font-weight:600;max-width:480px}
+.dl{display:flex;gap:8px}
+.dl a{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;border:2px solid #0B5A2E;color:#0B5A2E;text-decoration:none;font-size:14px}
+.dl a:hover{background:#0B5A2E;color:#fff}
+@media (max-width:600px){header,.grid{padding-inline:16px}.grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><h1>Light Windows — Visual Identity</h1>
+<div class="all"><a class="btn" href="pdf/light-windows-identity.pdf" download>Download all (PDF)</a><a class="btn alt" href="images/light-windows-identity-images.zip" download>Download all images (ZIP)</a></div></header>
+<div class="grid">
+<figure>
+  <a class="thumb" href="preview/Main.html" style="height:300px"><iframe src="preview/Main.html" tabindex="-1" aria-hidden="true" style="width:1440px;height:900px;transform:scale(0.3333)"></iframe></a>
+  <figcaption><span>01 · Brand overview</span>
+    <span class="dl"><a href="images/Main.png" download>PNG</a><a href="pdf/Main.pdf" download>PDF</a></span>
+  </figcaption>
+</figure>
+<figure>
+  <a class="thumb" href="preview/Colors.html" style="height:300px"><iframe src="preview/Colors.html" tabindex="-1" aria-hidden="true" style="width:1440px;height:900px;transform:scale(0.3333)"></iframe></a>
+  <figcaption><span>02 · Color</span>
+    <span class="dl"><a href="images/Colors.png" download>PNG</a><a href="pdf/Colors.pdf" download>PDF</a></span>
+  </figcaption>
+</figure>
+<figure>
+  <a class="thumb" href="preview/Type.html" style="height:300px"><iframe src="preview/Type.html" tabindex="-1" aria-hidden="true" style="width:1440px;height:900px;transform:scale(0.3333)"></iframe></a>
+  <figcaption><span>03 · Typography</span>
+    <span class="dl"><a href="images/Type.png" download>PNG</a><a href="pdf/Type.pdf" download>PDF</a></span>
+  </figcaption>
+</figure>
+<figure>
+  <a class="thumb" href="preview/Elements.html" style="height:300px"><iframe src="preview/Elements.html" tabindex="-1" aria-hidden="true" style="width:1440px;height:900px;transform:scale(0.3333)"></iframe></a>
+  <figcaption><span>04 · Motifs & applications</span>
+    <span class="dl"><a href="images/Elements.png" download>PNG</a><a href="pdf/Elements.pdf" download>PDF</a></span>
+  </figcaption>
+</figure>
+<figure>
+  <a class="thumb" href="preview/FacebookProfile.html" style="height:480px"><iframe src="preview/FacebookProfile.html" tabindex="-1" aria-hidden="true" style="width:720px;height:720px;transform:scale(0.6667)"></iframe></a>
+  <figcaption><span>05 · Facebook profile picture (720×720)</span>
+    <span class="dl"><a href="images/FacebookProfile.png" download>PNG</a><a href="pdf/FacebookProfile.pdf" download>PDF</a></span>
+  </figcaption>
+</figure>
+<figure>
+  <a class="thumb" href="preview/FacebookCover.html" style="height:183px"><iframe src="preview/FacebookCover.html" tabindex="-1" aria-hidden="true" style="width:1640px;height:624px;transform:scale(0.2927)"></iframe></a>
+  <figcaption><span>06 · Facebook cover (1640×624)</span>
+    <span class="dl"><a href="images/FacebookCover.png" download>PNG</a><a href="pdf/FacebookCover.pdf" download>PDF</a></span>
+  </figcaption>
+</figure>
+</div></body></html>
