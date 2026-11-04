@@ -27,7 +27,8 @@ jobs:
       - name: Prepare site
         run: |
           mkdir _site
-          cp index.html logo.jpeg _site/
+          cp index.html robots.txt sitemap.xml _site/
+          cp -r assets _site/assets
           cp -r designs _site/designs
 
       - name: Configure Pages

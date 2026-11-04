@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://light-windows.github.io/website/sitemap.xml
